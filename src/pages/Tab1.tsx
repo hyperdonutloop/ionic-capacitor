@@ -1,26 +1,18 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab1.css';
+import { IonHeader, IonPage, IonContent } from '@ionic/react';
+const logo = require('../logo.svg') as string;
 
-const Tab1: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <img src={logo} alt="react" />
+        <h1 className="things">things <span role="img" aria-label="bolt">⚡️</span></h1>
+        <p className="react">don't overreact, get things done</p>
       </IonContent>
     </IonPage>
+
   );
 };
 
-export default Tab1;
+export default Header;
